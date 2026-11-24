@@ -92,11 +92,12 @@ has its own seed; nothing further can be tuned against it.
   completers per 6h; every positive design is concentrated. This one
   spreads across 5 completers and 12 winners, and net without the top 3
   trips is +0.49 SOL.
-- **Stress (reshuffled copies):** the design is trajectory-dependent by
-  construction — reshuffling destroys the multi-hour trajectories it
-  exploits, so reshuffled copies mostly lose money. The contiguous 6h
-  slices (mean +3.42, median +2.00, 3 of 4 positive) are the better
-  final-window estimator.
+- **Stress (reshuffled copies):** `grade-local --stress` (10 block
+  surrogates): median −1.60, p10 −3.82, p90 +0.14 SOL; 8 of 10 lost money;
+  the dev score is above 10 of 10. Reshuffling destroys the multi-hour
+  trajectories this design exploits, so the copies mostly lose — that is
+  structural, not a knob failure. The contiguous 6h slices (mean +3.42,
+  median +2.00, 3 of 4 positive) are the better final-window estimator.
 - **Final-window lottery:** a 6h window with no slow completer scores
   roughly −1.3 to +0.9 SOL for this design (the Q2 slice is the
   pessimistic case).
